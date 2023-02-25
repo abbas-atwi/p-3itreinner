@@ -250,6 +250,9 @@ footer {
   display: flex;
   align-items: center;
 }
+.copy {
+  margin: 0 auto;
+}
 .copy p {
   font-size: 15px;
   color: #333;
@@ -257,7 +260,12 @@ footer {
   font-weight: normal;
   padding-left: 10px;
 }
-
+.copy q {
+  font-size: 13px;
+  padding-left: 10px;
+  color: #999;
+  margin-top: 5px;
+}
 @media (max-width: 850px) {
   .container {
     flex-direction: column;
@@ -303,6 +311,12 @@ footer {
   }
   .button a:last-child {
     margin-top: 10px;
+  }
+  .copy {
+    text-align: center;
+  }
+  .copy q {
+    font-size: 10px;
   }
   .modal {
     width: 250px;
