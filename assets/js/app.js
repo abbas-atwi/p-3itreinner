@@ -1,15 +1,16 @@
-let menu = document.querySelector(".menu");
-let iconCloseModal = document.querySelector(".iconCloseModal");
-menu.addEventListener("click", () => {
-  let modal = document.querySelector(".modal-area");
-  if (modal.style.display == "none") {
+let clickMenu = document.querySelector(".menu");
+let iconCloseModal = document.querySelector(".closeModal span");
+let modal = document.querySelector(".modal-area");
+clickMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (modal.style.display === "none") {
     modal.style.display = "flex";
-    modal.style.transition = "all 1s ease";
   } else {
     modal.style.display = "none";
   }
 });
 iconCloseModal.addEventListener("click", () => {
-  let modal = document.querySelector(".modal-area");
-  modal.style.display = "none";
+  if (modal.style.display == "flex") {
+    modal.style.display = "none";
+  }
 });
